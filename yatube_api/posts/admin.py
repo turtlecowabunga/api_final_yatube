@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Post, Comment, Group, Follow
 
-# Register your models here.
+
+@admin.register(Post, Comment, Group, Follow)
+class PostsAdmin(admin.ModelAdmin):
+    pass
